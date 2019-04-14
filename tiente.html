@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="number"id="number1">
+
+<select id="fromCurrency" name="FromCurrency">
+    <option value="VND">Việt Nam Đồng</option>
+    <option value="USD"> USD</option>
+></select>
+<select id="toCurrency" name="ToCurrency" >
+    <option value="USD">USD</option>
+    <option value="VND">Việt Nam Đông</option>
+    ></select>
+<button value="button" onclick="Convert()">Convert</button>;
+<br>
+<span id="tien"></span>
+<script>
+        function Convert() {
+            let a = document.getElementById('number1').value;
+            let fromCurrency = document.getElementById('fromCurrency');
+            let toCurrency = document.getElementById('toCurrency');
+            if (fromCurrency.value == toCurrency.value) {
+                result = a;
+
+            } else if (fromCurrency.value =="VND") {
+                result = parseInt(a) / 23000 ;
+
+
+            } else
+            {
+                result = parseInt(a) * 23000;
+
+            }document.getElementById("tien").innerHTML =result;
+        }
+
+
+</script>
+</body>
+</html>
